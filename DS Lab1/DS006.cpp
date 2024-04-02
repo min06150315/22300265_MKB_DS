@@ -38,7 +38,7 @@ int main()
 
     // grade 찾기
     for (int i = 0; i < 3; i++){
-        if (s1[i].score >= 95){     // A+
+        if (s1[i].score >= 95){         // A+
             s1[i].grade = 0;
         }else if (s1[i].score >= 90){   // A0
             s1[i].grade = 1;
