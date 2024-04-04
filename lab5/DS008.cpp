@@ -1,5 +1,4 @@
 // DS008. 문장을 숫자로 변환하기 (버전2)
-
 #include <iostream>
 using namespace std;
 
