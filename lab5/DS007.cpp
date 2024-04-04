@@ -1,4 +1,4 @@
-// 7. 문장을 숫자로 변환하기 (버전1)
+// DS007. 문장을 숫자로 변환하기 (버전1)
 #include <iostream>
 using namespace std;
 

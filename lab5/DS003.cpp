@@ -1,4 +1,4 @@
-// 3. 날짜(월,일)를 입력받아 1년 중 몇번째 날인지 계산
+// DS003. 날짜(월,일)를 입력받아 1년 중 몇번째 날인지 계산
 #include <iostream>
 using namespace std;
 

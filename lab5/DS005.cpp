@@ -1,4 +1,4 @@
-// 5. 알파벳 개수 세기
+// DS005. 알파벳 개수 세기
 #include <iostream>
 #include <cctype>
 using namespace std;

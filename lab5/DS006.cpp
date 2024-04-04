@@ -1,4 +1,4 @@
-// 6. 전공 3과목의 GPA 계산하기
+// DS006. 전공 3과목의 GPA 계산하기
 #include <iostream>
 using namespace std;
 
