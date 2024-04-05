@@ -8,6 +8,8 @@ struct st_score{
     double average;
 };
 
+void printGrade(int k, int e, int m);
+
 int main()
 {
     st_score s1;
@@ -20,26 +22,18 @@ int main()
     cout << s1.total;
     printf(" %.1f\n", s1.average);
 
-    cout << "Korean - ";
-    if (s1.kor >= 70){
-        cout << "Pass" << endl;
-    }else {
-        cout << "Fail" << endl;
-    }
-
-    cout << "English - ";
-    if (s1.eng >= 70){
-        cout << "Pass" << endl;
-    }else {
-        cout << "Fail" << endl;
-    }
-
-    cout << "Math - ";
-    if (s1.math >= 70){
-        cout << "Pass" << endl;
-    }else {
-        cout << "Fail" << endl;
-    }
-
+    printGrade(s1.kor, s1.eng, s1.math);
     return 0;
+}
+
+void printGrade(int k, int e, int m)
+{
+    string subject[] = {"Korean", "English", "Math"};
+    int score[] = {k, e, m};
+
+    for (int i = 0; i < 3; i++){
+        cout << subject[i] << " - ";
+        if (score[i] >= 70) cout << "Pass" << endl;
+        else cout << "Fail" << endl;
+    }
 }
