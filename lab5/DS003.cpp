@@ -2,22 +2,28 @@
 #include <iostream>
 using namespace std;
 
+int countDay(int m, int d);
+
 int main()
 {
     int month, day;
-    int day_count = 0;
-    int dateMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
+    
     cout << "Enter the date(month, day): ";
     cin >> month >> day;
 
-    for (int i = 0; i < month - 1; i++){
-        day_count = day_count + dateMonth[i];
-    }
-
-    day_count = day_count + day;
-
-    cout << day_count << endl;
+    cout << countDay(month, day) << endl;
 
     return 0;
+}
+
+int countDay(int m, int d)
+{
+    int day_count = 0;
+    int dateMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    for (int i = 0; i < m - 1; i++)
+        day_count = day_count + dateMonth[i];
+
+    day_count = day_count + d;
+    return day_count;
 }
