@@ -2,8 +2,8 @@
 #include <iostream>
 using namespace std;
 
-int CalculateSum(int count, int num[]);
-int CalculateMax(int count, int num[]);
+int CalculateSum(int count, int *num);
+int CalculateMax(int count, int *num);
 
 int main()
 {
@@ -11,14 +11,16 @@ int main()
     int count;
     cout << "Enter the number of numbers: ";
     cin >> count;
-    int num[count];
+    int* num = new int[count];
 
     cout << CalculateSum(count, num) << " " << CalculateMax(count, num) << endl;
+
+    delete[] num;
     return 0;
 }
 
 // 숫자 입력 받고 총합 구하기
-int CalculateSum(int count, int num[])
+int CalculateSum(int count, int *num)
 {
     int sum = 0;
     for (int i = 0; i < count; i++){
@@ -31,7 +33,7 @@ int CalculateSum(int count, int num[])
 }
 
 // 최댓값 구하기
-int CalculateMax(int count, int num[])
+int CalculateMax(int count, int *num)
 {
     int max = num[0];
     for (int i = 0; i < count - 1; i++)
