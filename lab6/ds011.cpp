@@ -28,7 +28,6 @@ int CalculateSum(int count, int *num)
         cin >> num[i];
         sum += num[i];
     }
-
     return sum;
 }
 
