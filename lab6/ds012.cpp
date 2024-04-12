@@ -29,7 +29,6 @@ int main()
 
 void inputItem(item* i)
 {
-    cout << "Enter the Item (name, price, factory): ";
     cin >> i->name >> i->price >> i->factory;
 }
 
