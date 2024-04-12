@@ -21,35 +21,34 @@ int main()
 {
     Cafe c1;
     addCafe(c1);
-    c1.list = new Menu[c1.count];
-
-    for (int i = 0; i < c1.count; i++)
-        addMenu(c1.list[i]);
-
     displayMenus(c1);
-
     return 0;
 }
 
-void addCafe(Cafe &r1)
+void addCafe(Cafe &c)
 {
     cout << "Enter the Cafe Name: ";
-    getline(cin, r1.name);
+    getline(cin, c.name);
 
     cout << "Enter the Number of Menu: ";
-    cin >> r1.count;
+    cin >> c.count;
+
+    c.list = new Menu[c.count];
+
+    for (int i = 0; i < c.count; i++)
+        addMenu(c.list[i]);
 }
 
-void addMenu(Menu &m1)
+void addMenu(Menu &c)
 {
     cout << "Enter the Menu and Price (menu, price): ";
-    cin >> m1.name >> m1.price;
+    cin >> c.name >> c.price;
 }
 
-void displayMenus(Cafe &r1)
+void displayMenus(Cafe &c)
 {
-    cout << "===== " << r1.name << " =====" << endl;
-    for (int i = 0; i < r1.count; i++)
-        cout << r1.list[i].name << " " << r1.list[i].price << endl;
+    cout << "===== " << c.name << " =====" << endl;
+    for (int i = 0; i < c.count; i++)
+        cout << c.list[i].name << " " << c.list[i].price << endl;
     cout << "=====================";
 }
