@@ -2,8 +2,8 @@
 #include <iostream>
 using namespace std;
 
-int CalculateSum(int count, int* num);
-int CalculateMax(int count, int* num);
+int getSum(int count, int* num);
+int getMax(int count, int* num);
 
 int main()
 {
@@ -11,13 +11,13 @@ int main()
     cin >> count;
     int* num = new int[count];
 
-    cout << CalculateSum(count, num) << " " << CalculateMax(count, num) << endl;
+    cout << getSum(count, num) << " " << getMax(count, num) << endl;
 
     delete[] num;
     return 0;
 }
 
-int CalculateSum(int count, int* num)
+int getSum(int count, int* num)
 {
     int sum = 0;
     for (int i = 0; i < count; i++){
@@ -27,7 +27,7 @@ int CalculateSum(int count, int* num)
     return sum;
 }
 
-int CalculateMax(int count, int* num)
+int getMax(int count, int* num)
 {
     int max = num[0];
     for (int i = 0; i < count - 1; i++)
