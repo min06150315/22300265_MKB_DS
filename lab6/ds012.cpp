@@ -19,11 +19,9 @@ int main()
 
     inputItem(i1);
     inputItem(i2);
-
     compareItem(i1, i2);
 
-    delete i1;
-    delete i2;
+    delete i1, i2;
     return 0;
 }
 
@@ -34,9 +32,11 @@ void inputItem(item* i)
 
 void compareItem(item* i1, item* i2)
 {
+    // 원래 문자열의 복사본 저장
     string temp1 = i1->name;
     string temp2 = i2->name;
 
+    // 모두 대문자로 만들어 대소문자 구분 없이 비교하기
     toUpperCase(&i1->name);
     toUpperCase(&i2->name);
 
