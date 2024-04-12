@@ -22,6 +22,7 @@ int main()
     Cafe c1;
     addCafe(c1);
     displayMenus(c1);
+    delete[] c1.list;
     return 0;
 }
 
