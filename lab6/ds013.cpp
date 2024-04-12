@@ -28,10 +28,8 @@ int main()
 
 void addCafe(Cafe &c)
 {
-    cout << "Enter the Cafe Name: ";
     getline(cin, c.name);
 
-    cout << "Enter the Number of Menu: ";
     cin >> c.count;
 
     c.list = new Menu[c.count];
@@ -42,7 +40,6 @@ void addCafe(Cafe &c)
 
 void addMenu(Menu &c)
 {
-    cout << "Enter the Menu and Price (menu, price): ";
     cin >> c.name >> c.price;
 }
 
@@ -51,5 +48,5 @@ void displayMenus(Cafe &c)
     cout << "===== " << c.name << " =====" << endl;
     for (int i = 0; i < c.count; i++)
         cout << c.list[i].name << " " << c.list[i].price << endl;
-    cout << "=====================";
+    cout << "=================";
 }
