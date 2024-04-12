@@ -10,12 +10,12 @@ struct Menu{
 struct Cafe{
     string name;    // 식당 이름 (공백포함)
     int count;      // 메뉴개수
-    Menu* list;     // 메뉴 리스트 ( 포인터 변수)
+    Menu* list;     // 메뉴 리스트 (포인터 변수)
 };
 
-void addCafe(Cafe &r1);
-void addMenu(Menu &m1);
-void displayMenus(Cafe &r1);
+void addCafe(Cafe &c);
+void addMenu(Menu &c);
+void displayMenus(Cafe &c);
 
 int main()
 {
@@ -29,9 +29,7 @@ int main()
 void addCafe(Cafe &c)
 {
     getline(cin, c.name);
-
     cin >> c.count;
-
     c.list = new Menu[c.count];
 
     for (int i = 0; i < c.count; i++)
@@ -45,7 +43,7 @@ void addMenu(Menu &c)
 
 void displayMenus(Cafe &c)
 {
-    cout << "===== " << c.name << " =====" << endl;
+    cout << endl << "===== " << c.name << " =====" << endl;
     for (int i = 0; i < c.count; i++)
         cout << c.list[i].name << " " << c.list[i].price << endl;
     cout << "=================";
