@@ -20,8 +20,8 @@ double Student::getAvg() const {
 }
 
 void Student::print() const {
-            cout << "[" << sid << "] " << name << endl;
-            cout << "The Average score is " << getAvg() << endl;
+    cout << "[" << sid << "] " << name << endl;
+    cout << "The Average score is " << getAvg() << endl;
 }
 
 int main()
