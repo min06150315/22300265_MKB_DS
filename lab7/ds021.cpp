@@ -4,23 +4,25 @@ using namespace std;
 
 class Student {
     private:
-        double getAvg() const {
-            int sum = 0;
-            for (int i = 0; i < 3; i++){
-                sum += score[i];
-            }
-            return (double) sum / 3;
-        }
+        double getAvg() const;
     public:
         string name;
         string sid;
         int* score;
-        
-        void print() const {
+        void print() const;
+};
+
+double Student::getAvg() const {
+        int sum = 0;
+        for (int i = 0; i < 3; i++)
+            sum += score[i];
+        return (double) sum / 3;
+}
+
+void Student::print() const {
             cout << "[" << sid << "] " << name << endl;
             cout << "The Average score is " << getAvg() << endl;
-        }
-};
+}
 
 int main()
 {
