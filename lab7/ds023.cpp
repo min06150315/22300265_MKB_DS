@@ -12,7 +12,7 @@ class Product {
     public:
         Product();
         Product(string name, int price, int saleRate, string factory, string size);
-        void AddProduct();  
+        void AddProduct(); 
         void print() const;
         int getSalePrice() const;
 };
