@@ -18,7 +18,7 @@ double Student::getAvg() const {
             sum += score[i];
         return (double) sum / 3;
 }
-
+    
 void Student::print() const {
     cout << "[" << sid << "] " << name << endl;
     cout << "The Average score is " << getAvg() << endl;
