@@ -1,8 +1,9 @@
-dS021.cpp <br>
-<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab7/result/ds021.png">
+dS031.cpp <br>
+<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab9/result/ds031_1.png">
+<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab9/result/ds031_2.png">
 
-dS022.cpp <br>
-<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab7/result/ds022.png">
+dS032.cpp <br>
+<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab9/result/ds032_1.png">
+<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab9/result/ds032_2.png">
 
-dS023.cpp <br>
-<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab7/result/ds023.png">
+dS033.cpp <br>
