@@ -57,13 +57,22 @@ elem* CouponStack::pop() {
     return &list[--top];
 }
 
-void CouponStack::print() const {
+void CouponStack::print() const {   // stack 전체 출력
     for (int i = 0; i < top; i++)
         cout << list[i].rank << "등 - " << list[i].name << endl;
 }
 
-void CouponStack::rprint() const {
-    //pop하고 출력
+void CouponStack::rprint() const {  // stack pop하면서 전체 출력
+    CouponStack tempStack(top);
+    for (int i = 0; i < top; i++)
+        tempStack.list[i] = list[i];
+    tempStack.top = top;
+
+    // 임시 스택을 pop하며 출력
+    while (!tempStack.isEmpty()) {
+        elem* p = tempStack.pop();
+        cout << p->rank << " Rank - " << p->name << endl;
+    }
 }
 
 int main() {
@@ -71,15 +80,19 @@ int main() {
     cin >> s_size;
     CouponStack s1(s_size);
     elem* p;
+    elem temp;
 
     string menu;
-    while (true) {
+    while (true) {  // q를 입력할 때까지 반복
         cin >> menu;
-        if (menu == "+") {
-
-        } else if (menu == "-") {
+        if (menu == "+") {  // +: stack에 <쿠폰정보>에 해당하는 쿠폰 구조체를 만들어 push한다.
+            cin >> temp.rank;
+            getline(cin, temp.name);
+            s1.push(temp);
+        } else if (menu == "-") {   // -: stack에서 마지막으로 넣은 쿠폰을 꺼내어, 쿠폰정보를 출력한다.
             p = s1.pop();
-            cout << p->rank << "등 - " << p->name << endl;
+            if (p != nullptr)
+                cout << p->rank << " Rank - " << p->name << endl;
         } else if (menu == "q") {
             break;
         }
