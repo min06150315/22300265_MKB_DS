@@ -28,16 +28,18 @@ void MyLinkedListQueue::enqueue(const int& e) {
     }
 }
 
-void MyLinkedListQueue::dequeue() {
+int MyLinkedListQueue::dequeue() {
     if (isempty()) {
         cout << "Queue is Empty." << endl;
-        return;
+        return -1;
     } else {
         Node* ptr = front;
+        int data = ptr->data;
         front = front->next;
         if (front == NULL)
             rear = NULL;
         delete ptr;
+        return data;
     }
 }
 

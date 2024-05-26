@@ -23,11 +23,11 @@ class MyLinkedListQueue {
         ~MyLinkedListQueue();
         void initialize();
         void enqueue(const int&);
-        void dequeue();
+        int dequeue();
         bool isempty() const;
         void Rear() const;
         void Front() const;
         void printAll() const;
 };
 
-#endif LLQ_H
+#endif
