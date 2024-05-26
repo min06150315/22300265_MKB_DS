@@ -23,8 +23,8 @@ class MyLinkedListQueue {
         void enqueue(const int&);
         void dequeue();
         bool isempty() const;
-        int Rear() const;
-        int Front() const;
+        void Rear() const;
+        void Front() const;
         void printAll() const;
 };
 MyLinkedListQueue::MyLinkedListQueue() {
@@ -72,20 +72,18 @@ bool MyLinkedListQueue::isempty() const {
     return front == NULL;
 }
 
-int MyLinkedListQueue::Rear() const {
-    if (isempty()) {
+void MyLinkedListQueue::Rear() const {
+    if (isempty())
         cout << "Queue is empty." << endl;
-        return -1;
-    }
-    return rear->data;
+    else 
+        cout << "element at rear: " << rear->data << endl;
 }
 
-int MyLinkedListQueue::Front() const {
-    if (isempty()) {
+void MyLinkedListQueue::Front() const {
+    if (isempty())
         cout << "Queue is empty." << endl;
-        return -1;
-    }
-    return front->data;
+    else
+        cout << "element at front: " << front->data << endl;
 }
 
 void MyLinkedListQueue::printAll() const {
@@ -96,7 +94,7 @@ void MyLinkedListQueue::printAll() const {
         
         cout << ptr->data;
         ptr = ptr->next;
-        
+
         while (ptr != NULL) {
             cout  << " -> " << ptr->data;
             ptr = ptr->next; 
@@ -123,10 +121,10 @@ int main() {
                 q1.dequeue();
                 break;
             case 3: 
-                cout << "element at front: " << q1.Front() << endl;
+                q1.Front();
                 break;
             case 4:
-                cout << "element at rear: " << q1.Rear() << endl;
+                q1.Rear();
                 break;
             case 5:
                 q1.printAll();
