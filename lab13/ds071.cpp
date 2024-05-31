@@ -26,10 +26,9 @@ void SelectionSort(Element list[], int n) {
     int i = 0, j = 0, min = 0, temp = 0;
     for (i = 0; i < n - 1; i++) {
         min = i;
-        for (j = i + 1; j < n; j++) {
+        for (j = i + 1; j < n; j++)
             if (list[j] < list[min])
                 min = j;
-        }
         swap(list[i], list[min]);
 #ifdef DEBUGMODE
         PrintArray(list, n);
