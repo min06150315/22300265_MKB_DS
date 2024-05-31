@@ -34,7 +34,7 @@ int main() {
                 cout << "=== ascending order ===" << endl;
                 BubbleSortAscending(list, count);
                 PrintArray(list, count);
-
+    
                 cout << "=== descending order === " << endl;
                 BubbleSortDescending(temp, count);
                 PrintArray(temp, count);
