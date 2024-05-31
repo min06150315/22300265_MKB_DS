@@ -1,6 +1,6 @@
 CC = g++
-LIBPATH = ./lib
-LIB_SRC = $(LIBPATH)
+LIBPATH = ./lib/
+LIB_SRC = $(LIBPATH)Sorting.cpp
 LIB_OBJ = $(subst /,\,$(LIBPATH)Sorting.o)
 INCLUDEPATH = -I$(LIBPATH)
 EXE1 = ds071
@@ -19,17 +19,17 @@ $(LIB_OBJ): $(LIB_SRC)
 $(EXE1): $(EXE1).cpp 
 	$(CC) -o $@ $^ 
 
-$(EXE2): $(EXE2).cpp
-	$(CC) -o $@ $^
-   
-$(EXE3): $(EXE3).cpp
-	$(CC) -o $@ $^
+$(EXE2): $(EXE2).cpp 
+	$(CC) -o $@ $^ 
 
-$(EXE4): $(EXE4).cpp
-	$(CC) -o $@ $^
+$(EXE3): $(EXE3).cpp 
+	$(CC) -o $@ $^ 
 
-$(EXE5): $(EXE5).cpp
-	$(CC) -o $@ $^
+$(EXE4): $(EXE4).cpp 
+	$(CC) -o $@ $^ 
+
+$(EXE5): $(EXE5).cpp 
+	$(CC) -o $@ $^ 
 
 $(EXE6): $(EXE6).cpp $(LIB_OBJ)
 	$(CC) -o $@ $^ $(INCLUDEPATH)
