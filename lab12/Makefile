@@ -1,7 +1,7 @@
 CC = g++
 LIBPATH = ./lib/
 LIB_SRC = $(LIBPATH)MyLinkedListQueue.cpp
-LIB_OBJ = $(subst /,\,$(LIBPATH)Queue.o)
+LIB_OBJ = $(subst /,\,$(LIBPATH)MyLinkedListQueue.o)
 INCLUDEPATH = -I$(LIBPATH)
 EXE1 = ds061
 EXE2 = ds062
