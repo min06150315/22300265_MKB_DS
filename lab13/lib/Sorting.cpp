@@ -26,19 +26,19 @@ void InsertionSort(Element list[], int n) {
 
 void BubbleSortAscending(Element list[], int n) {
     for(int i = 0; i < n - 1; i++) {
+        PrintArray(list, n);
         for(int j = 0; j < n - i - 1; j++)
             if(list[j] > list[j + 1])
                 swap(list[j], list[j + 1]);
-        PrintArray(list, n);
     }
 }
 
 void BubbleSortDescending(Element list[], int n) {
     for(int i = 0; i < n - 1; i++) {
+        PrintArray(list, n);
         for(int j = 0; j < n - i - 1; j++)
             if(list[j] < list[j + 1])
                 swap(list[j], list[j + 1]);
-        PrintArray(list, n);
     }
 }
 
