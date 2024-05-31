@@ -1,4 +1,7 @@
 <h3>DS071</h3> <br>
+Makefile 실행 <br>
+<img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab13/result/Makefile.png"> <br>
+
 DS071 테스트 1  <br>
 <img src = "https://github.com/min06150315/22300265_MKB_DS/blob/main/lab13/result/DS071_1.png"> <br>
 DS071 테스트 2  <br>
