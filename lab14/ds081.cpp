@@ -10,12 +10,14 @@ public:
     TreeNode *left, *right;
     TreeNode(int x) {
         val = x;
-        left = right = NULL;;
+        left = right = NULL;
     }
 };
  
 TreeNode* buildTree(int *nums, int size) {
     if (nums == NULL) return NULL;
+
+    if (nums[0] == 0) return nullptr;
 
     TreeNode* root = new TreeNode(nums[0]);
     queue<TreeNode*> q;
@@ -25,14 +27,16 @@ TreeNode* buildTree(int *nums, int size) {
     while (i < size) {
         TreeNode* curr = q.front();
         q.pop();
-        if (i < size) {
-            curr->left = new TreeNode(nums[i++]);
+        if (i < size && nums[i] != 0) {
+            curr->left = new TreeNode(nums[i]);
             q.push(curr->left);
         }
-        if (i < size) {
-            curr->right = new TreeNode(nums[i++]);
+        i++;
+        if (i < size && nums[i] != 0) {
+            curr->right = new TreeNode(nums[i]);
             q.push(curr->right);
         }
+        i++;
     }
     return root;
 }
@@ -55,5 +59,6 @@ int main() {
     TreeNode* root = buildTree(list, num);
     printInOrderTree(root);
     
+    delete[] list;
     return 0;
 }
